@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Chelsea+Market" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/snitch.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+
+<div class="imgAndResponse_holder">
+    <div class="img_holder"></div>
+    <div class="img_text"></div>
+</div>
+
+<div class="buttons-holder">
+    <div class="round-button" id="open_cam_button" >
+            <div class="text">Cam</div>
+    </div>
+
+    <div class="round-button" id="send_img">
+            <div class="text">Send</div>
+    </div>
+</div>
+
+<input type="file" name="image" accept="image/*" capture="environment">
+<video id="video" width="640" height="480" autoplay></video>
+<button id="snap">Snap Photo</button>
+<canvas id="canvas" width="640" height="480"></canvas>
+<div id="test"></div>
+
+<script src="./js/snitch.js" type="text/javascript"></script>
+
+</body>
+</html>
