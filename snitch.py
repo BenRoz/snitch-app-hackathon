@@ -5,14 +5,14 @@ import pymysql
 
 BaseRequest.MEMFILE_MAX=1024*1024
 
-connection = pymysql.connect(
-    host='localhost',
-    user='root',
-    password='bensql',
-    db='ben_online_store',
-    charset='utf8',
-    cursorclass=pymysql.cursors.DictCursor
-)
+# connection = pymysql.connect(
+#     host='localhost',
+#     user='root',
+#     password='bensql',
+#     db='ben_online_store',
+#     charset='utf8',
+#     cursorclass=pymysql.cursors.DictCursor
+# )
 
 @get("/")
 def index():
@@ -47,7 +47,6 @@ def send_data():
 def get_img():
     image = request.POST.get('imgBase64')
     #functiuon of datasciene guys
-
     print image
     return image
 
