@@ -17,7 +17,7 @@ BaseRequest.MEMFILE_MAX=1024*1024
 @get("/")
 def index():
     print "in index"
-    return template("snitch.html")
+    return template("index.html")
 
 
 @post("/data")
@@ -48,9 +48,12 @@ def get_img():
     image = request.POST.get('imgBase64')
     #functiuon of datasciene guys
     print image
-    return image
+    #return image
+    return "Saved"
 
-
+@get('/images/<filename:re:.*\.(jpg|png|gif|ico)>')
+def images(filename):
+    return static_file(filename, root='images')
 
 @get('/js/<filename:re:.*\.js>')
 def javascripts(filename):

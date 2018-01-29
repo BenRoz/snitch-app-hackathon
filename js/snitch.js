@@ -20,7 +20,7 @@ document.getElementById('open_cam_button').addEventListener("click", function() 
      context = canvas.getContext('2d');
 
     document.getElementById("snap").addEventListener("click", function() {
-        context.drawImage(video, 0, 0, 200, 200);
+        context.drawImage(video, 0, 0, 320, 240);
         video.pause();
         video.src="";
     });
@@ -35,8 +35,10 @@ document.getElementById('send_img').addEventListener("click", function(){
         data: {
             imgBase64: dataUrl
        }
-    }).done(function(o){
-        console.log('saved')
+    }).done(function(response){
+        $('#img_text').text(response);
+        console.log(response)
+        //console.log('saved')
     })
 
 });

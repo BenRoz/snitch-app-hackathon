@@ -95,6 +95,10 @@
     font-family: font-family: 'Coustard', serif;
     left: 30%;
 }
+
+#img_text{
+    color: white;
+}
 a{
 text-decoration:none;
 }

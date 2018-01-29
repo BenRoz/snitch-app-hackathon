@@ -33,8 +33,12 @@
 
 <div class="content-stripe">
     <div class="imgAndResponse_holder">
-        <div class="img_holder"></div>
-        <div class="img_text"></div>
+        <div class="img_holder">
+            <video id="video" autoplay></video>
+            <canvas id="canvas" width="640" height="480"></canvas>
+            <button id="snap">Snap Photo</button>
+        </div>
+        <div id="img_text"></div>
     </div>
 
     <div class="buttons-holder">
@@ -45,12 +49,8 @@
         <div class="round-button" id="send_img">
                 <div class="text">Send</div>
         </div>
-    </div>
+    </div>    <!--<input type="file" name="image" accept="image/*" capture="environment">-->
 
-    <input type="file" name="image" accept="image/*" capture="environment">
-    <video id="video" autoplay></video>
-    <button id="snap">Snap Photo</button>
-    <canvas id="canvas" width="640" height="480"></canvas>
     <div id="test"></div>
 </div>
 <script src="./js/snitch.js" type="text/javascript"></script>
